@@ -7,12 +7,13 @@ function onSearch(ev) {
 
     getCountryBy('name', value)
         .then(renderCountry)
-        .then(hideLoader)
         .then(() => { window.scrollTo({ top: document.body.scrollHeight }) })
+        .catch(err => console.log('Could not find country', err))
+        .finally(hideLoader)
 }
 
 function renderCountry(country) {
-    console.log('country', country)
+    console.log(' country:', country)
     const { common: countryName } = country.name
     const [lat, lng] = country.latlng
 

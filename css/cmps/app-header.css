@@ -1,14 +1,8 @@
 .app-header {
-    position: relative;
-    overflow-y: hidden;
     height: 100vh;
-}
 
-.app-header .globe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    background-image: url('/img/globe.png');
+    background-position: center;
 }
 
 .app-header .delete-cache {

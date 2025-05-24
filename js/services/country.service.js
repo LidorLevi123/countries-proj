@@ -34,7 +34,6 @@ function _getEndpoints(term) {
 }
 
 function _refactorBorders(country) {
-    console.log('country:', country)
     if(!country.borders) return country
     
     const prms = country.borders.map(border =>
